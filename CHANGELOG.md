@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added `WaypointKitDemo`, a no-network executable that demonstrates verified candidate replacement and reviewable route proposals.
+- Added public route-editing regression fixtures and validation coverage for diff, narrative, usability, and warning behavior.
+- Added evaluation documentation describing the fixture workflow and future regression surface.
+
 ## 0.1.1 - 2026-06-01
 
 - Lowered the Swift tools version to 6.1 so GitHub Actions and common runner toolchains can validate the package.
