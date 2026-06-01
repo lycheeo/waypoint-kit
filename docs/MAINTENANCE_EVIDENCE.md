@@ -5,20 +5,28 @@ WaypointKit is an early open-source extraction from ETA, a private iOS route-pla
 ## Public Evidence
 
 - Repository: https://github.com/lycheeo/waypoint-kit
-- Release: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.2.0
+- Release: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.3.0
 - License: MIT
 - Demo command: `swift run WaypointKitDemo`
 - Validation command: `swift run WaypointKitValidation`
-- Current validation coverage: 43 framework-free validation cases
+- SwiftUI example: `Examples/WaypointKitSwiftUIDemo`
+- Current validation coverage: 47 framework-free validation cases
 - Public route-edit regression fixtures: `Fixtures/route-edit-regressions.json`
+- Provider-neutral POI boundary: `POIProvider`, `POISearchRequest`, and `MockPOIProvider`
+- Coordinate boundary documentation: `docs/COORDINATE_SYSTEMS.md`
 - Merged pull requests:
   - https://github.com/lycheeo/waypoint-kit/pull/5
   - https://github.com/lycheeo/waypoint-kit/pull/6
+  - https://github.com/lycheeo/waypoint-kit/pull/7
+  - https://github.com/lycheeo/waypoint-kit/pull/8
 - Public maintenance plan:
   - Open:
+    - https://github.com/lycheeo/waypoint-kit/issues/9
+    - https://github.com/lycheeo/waypoint-kit/issues/10
+    - https://github.com/lycheeo/waypoint-kit/issues/11
+  - Closed through public PR workflow:
     - https://github.com/lycheeo/waypoint-kit/issues/1
     - https://github.com/lycheeo/waypoint-kit/issues/2
-  - Closed through public PR workflow:
     - https://github.com/lycheeo/waypoint-kit/issues/3
     - https://github.com/lycheeo/waypoint-kit/issues/4
 
@@ -45,8 +53,10 @@ The open-source package keeps only the reusable core:
 - WGS-84 / GCJ-02 coordinate conversion
 - route metric fallback behavior
 - route-change diffing and proposal summaries
+- provider-neutral POI verification before route mutation
 - AI intent routing between conversation, trip inspiration, route creation, and route editing
 - prompt and tool-schema boundaries for verified POI search
+- build-checked SwiftUI example using mock provider data
 - no-network demo flow for a verified candidate replacement
 - public route-edit regression fixtures for reviewable diff and warning behavior
 - deterministic validation cases that do not require private API keys
