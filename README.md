@@ -85,3 +85,5 @@ WaypointKit validation passed (39 validation cases).
 This is an early open-source extraction from the ETA app. The first public milestone is a stable core toolkit, not a full navigation app.
 
 See [ROADMAP.md](ROADMAP.md) for planned provider abstractions, examples, and regression evaluation work.
+
+See [docs/MAINTENANCE_EVIDENCE.md](docs/MAINTENANCE_EVIDENCE.md) for the public maintenance evidence and the local ETA extraction boundary.

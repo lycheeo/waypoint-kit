@@ -30,16 +30,21 @@ The project was extracted from ETA, a real iOS route-planning app developed and 
 - Swift package with public API and MIT license.
 - Validation executable with 39 validation cases.
 - Documentation for architecture, contribution flow, security, and roadmap.
-- Initial release target: `v0.1.0`.
+- Public release: `v0.1.0`.
+- Local ETA source history includes a V4.20 frozen baseline, a V5.70 iOS archive, 15 local validation screenshots, and a versioned development log. These private artifacts are summarized in `docs/MAINTENANCE_EVIDENCE.md` without publishing signing metadata, device identifiers, private UI code, or service credentials.
 
-Fill these after publishing:
+Published evidence:
 
-- Public repo URL:
-- Release URL:
+- Public repo URL: https://github.com/lycheeo/waypoint-kit
+- Release URL: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.1.0
 - Issues:
-- Pull requests:
-- Stars:
-- Downloads:
+  - https://github.com/lycheeo/waypoint-kit/issues/1
+  - https://github.com/lycheeo/waypoint-kit/issues/2
+  - https://github.com/lycheeo/waypoint-kit/issues/3
+  - https://github.com/lycheeo/waypoint-kit/issues/4
+- Pull requests: this maintenance-evidence update should be published as the first follow-up PR.
+- Stars: 0 at launch; do not inflate this.
+- Downloads: not available at launch; do not inflate this.
 
 ## How Codex Would Help
 
@@ -63,7 +68,9 @@ API credits would help run regression evaluations for:
 ```text
 I am the primary maintainer of WaypointKit, an open-source Swift toolkit for AI-assisted route planning and waypoint editing.
 
-The project was extracted from ETA, a real iOS route-planning app I have been building and testing on device. WaypointKit focuses on a practical problem in AI travel software: LLMs can understand route changes, but they should not invent coordinates or directly mutate itinerary state. The package separates natural-language route editing from verified POI provider results, so route changes can be proposed, validated, diffed, tested, and safely applied.
+The project was extracted from ETA, a real iOS route-planning app I have been building and testing locally on device. My local evidence includes a V4.20 frozen baseline, a V5.70 iOS archive, versioned build/install notes, AI route-editing workflow notes, and validation screenshots. I am publishing the reusable core only, not the private app shell or provider credentials.
+
+WaypointKit focuses on a practical problem in AI travel software: LLMs can understand route changes, but they should not invent coordinates or directly mutate itinerary state. The package separates natural-language route editing from verified POI provider results, so route changes can be proposed, validated, diffed, tested, and safely applied.
 
 The repository includes waypoint models, route metrics, route diffing, WGS-84 / GCJ-02 coordinate conversion, AI intent routing, OpenAI-compatible tool schemas, prompt builders, proposal narratives, documentation, and a validation executable covering the core behavior.
 
