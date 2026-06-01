@@ -9,6 +9,7 @@ WaypointKit is an early open-source extraction from ETA, a private iOS route-pla
 - License: MIT
 - Validation command: `swift run WaypointKitValidation`
 - Current validation coverage: 39 framework-free validation cases
+- Follow-up pull request: https://github.com/lycheeo/waypoint-kit/pull/5
 - Public maintenance plan:
   - https://github.com/lycheeo/waypoint-kit/issues/1
   - https://github.com/lycheeo/waypoint-kit/issues/2

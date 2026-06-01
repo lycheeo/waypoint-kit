@@ -42,7 +42,7 @@ Published evidence:
   - https://github.com/lycheeo/waypoint-kit/issues/2
   - https://github.com/lycheeo/waypoint-kit/issues/3
   - https://github.com/lycheeo/waypoint-kit/issues/4
-- Pull requests: this maintenance-evidence update should be published as the first follow-up PR.
+- Pull requests: https://github.com/lycheeo/waypoint-kit/pull/5
 - Stars: 0 at launch; do not inflate this.
 - Downloads: not available at launch; do not inflate this.
 
