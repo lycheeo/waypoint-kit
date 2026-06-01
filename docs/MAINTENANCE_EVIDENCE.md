@@ -5,16 +5,22 @@ WaypointKit is an early open-source extraction from ETA, a private iOS route-pla
 ## Public Evidence
 
 - Repository: https://github.com/lycheeo/waypoint-kit
-- Release: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.1.1
+- Release: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.2.0
 - License: MIT
+- Demo command: `swift run WaypointKitDemo`
 - Validation command: `swift run WaypointKitValidation`
-- Current validation coverage: 39 framework-free validation cases
-- Follow-up pull request: https://github.com/lycheeo/waypoint-kit/pull/5
+- Current validation coverage: 43 framework-free validation cases
+- Public route-edit regression fixtures: `Fixtures/route-edit-regressions.json`
+- Merged pull requests:
+  - https://github.com/lycheeo/waypoint-kit/pull/5
+  - https://github.com/lycheeo/waypoint-kit/pull/6
 - Public maintenance plan:
-  - https://github.com/lycheeo/waypoint-kit/issues/1
-  - https://github.com/lycheeo/waypoint-kit/issues/2
-  - https://github.com/lycheeo/waypoint-kit/issues/3
-  - https://github.com/lycheeo/waypoint-kit/issues/4
+  - Open:
+    - https://github.com/lycheeo/waypoint-kit/issues/1
+    - https://github.com/lycheeo/waypoint-kit/issues/2
+  - Closed through public PR workflow:
+    - https://github.com/lycheeo/waypoint-kit/issues/3
+    - https://github.com/lycheeo/waypoint-kit/issues/4
 
 ## Local Source Evidence
 
@@ -41,6 +47,8 @@ The open-source package keeps only the reusable core:
 - route-change diffing and proposal summaries
 - AI intent routing between conversation, trip inspiration, route creation, and route editing
 - prompt and tool-schema boundaries for verified POI search
+- no-network demo flow for a verified candidate replacement
+- public route-edit regression fixtures for reviewable diff and warning behavior
 - deterministic validation cases that do not require private API keys
 
 The package does not publish ETA's private app shell, provider credentials, signing information, device identifiers, or vendor-specific service clients.

@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 - 2026-06-01
 
 - Added `WaypointKitDemo`, a no-network executable that demonstrates verified candidate replacement and reviewable route proposals.
 - Added public route-editing regression fixtures and validation coverage for diff, narrative, usability, and warning behavior.
