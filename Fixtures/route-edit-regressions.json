@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "description": "Deterministic route-editing regression fixtures for WaypointKit. Coordinates are public WGS-84 sample data and do not require service keys.",
+  "cases": [
+    {
+      "id": "replace-museum-with-riverside",
+      "title": "Replace a museum stop with a quieter riverside place",
+      "user_prompt": "Replace the museum stop with a quieter riverside walk, but keep the start and final stop.",
+      "route_name": "Shanghai riverside evening",
+      "summary": "Replace the museum visit with a quieter riverside stop while preserving the rest of the route.",
+      "before": [
+        {
+          "name": "People's Square",
+          "address": "Huangpu, Shanghai",
+          "latitude": 31.2304,
+          "longitude": 121.4737,
+          "is_selected": true,
+          "stay_minutes": 20
+        },
+        {
+          "name": "Shanghai Museum",
+          "address": "201 Renmin Avenue, Shanghai",
+          "latitude": 31.2303,
+          "longitude": 121.4707,
+          "is_selected": true,
+          "stay_minutes": 60
+        },
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        }
+      ],
+      "after": [
+        {
+          "name": "People's Square",
+          "address": "Huangpu, Shanghai",
+          "latitude": 31.2304,
+          "longitude": 121.4737,
+          "is_selected": true,
+          "stay_minutes": 20
+        },
+        {
+          "name": "Xuhui Riverside",
+          "address": "Longteng Avenue, Shanghai",
+          "latitude": 31.1808,
+          "longitude": 121.4639,
+          "is_selected": true,
+          "stay_minutes": 45
+        },
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        }
+      ],
+      "expected_change_kinds": [
+        "replaced"
+      ],
+      "expected_card_title": "1 changes to review",
+      "expected_safety_line": "The waypoint list changes only after confirmation.",
+      "expected_usable": true,
+      "expected_point_count_delta": "same waypoint count"
+    },
+    {
+      "id": "append-food-stop",
+      "title": "Append a verified food stop before the final scenic stop",
+      "user_prompt": "Add a casual dinner stop before the final walk.",
+      "route_name": "Shanghai dinner and walk",
+      "summary": "Insert a verified restaurant stop before the final scenic stop.",
+      "before": [
+        {
+          "name": "People's Square",
+          "address": "Huangpu, Shanghai",
+          "latitude": 31.2304,
+          "longitude": 121.4737,
+          "is_selected": true,
+          "stay_minutes": 20
+        },
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        }
+      ],
+      "after": [
+        {
+          "name": "People's Square",
+          "address": "Huangpu, Shanghai",
+          "latitude": 31.2304,
+          "longitude": 121.4737,
+          "is_selected": true,
+          "stay_minutes": 20
+        },
+        {
+          "name": "Yunnan Road Food Street",
+          "address": "Yunnan South Road, Shanghai",
+          "latitude": 31.2288,
+          "longitude": 121.4803,
+          "is_selected": true,
+          "stay_minutes": 50
+        },
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        }
+      ],
+      "expected_change_kinds": [
+        "added"
+      ],
+      "expected_card_title": "1 changes to review",
+      "expected_safety_line": "The waypoint list changes only after confirmation.",
+      "expected_usable": true,
+      "expected_point_count_delta": "+1 waypoints"
+    },
+    {
+      "id": "reorder-final-walk-first",
+      "title": "Reorder the same verified points without changing route facts",
+      "user_prompt": "Start with the Bund first, then continue through the city center.",
+      "route_name": "Bund-first city center route",
+      "summary": "Reorder existing verified points and keep the same waypoint set.",
+      "before": [
+        {
+          "name": "People's Square",
+          "address": "Huangpu, Shanghai",
+          "latitude": 31.2304,
+          "longitude": 121.4737,
+          "is_selected": true,
+          "stay_minutes": 20
+        },
+        {
+          "name": "Shanghai Museum",
+          "address": "201 Renmin Avenue, Shanghai",
+          "latitude": 31.2303,
+          "longitude": 121.4707,
+          "is_selected": true,
+          "stay_minutes": 60
+        },
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        }
+      ],
+      "after": [
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        },
+        {
+          "name": "People's Square",
+          "address": "Huangpu, Shanghai",
+          "latitude": 31.2304,
+          "longitude": 121.4737,
+          "is_selected": true,
+          "stay_minutes": 20
+        },
+        {
+          "name": "Shanghai Museum",
+          "address": "201 Renmin Avenue, Shanghai",
+          "latitude": 31.2303,
+          "longitude": 121.4707,
+          "is_selected": true,
+          "stay_minutes": 60
+        }
+      ],
+      "expected_change_kinds": [
+        "reordered"
+      ],
+      "expected_card_title": "1 changes to review",
+      "expected_safety_line": "The waypoint list changes only after confirmation.",
+      "expected_usable": true,
+      "expected_point_count_delta": "same waypoint count"
+    },
+    {
+      "id": "delete-to-single-stop-blocked",
+      "title": "Block a route proposal with too few selected waypoints",
+      "user_prompt": "Delete everything except the Bund.",
+      "route_name": "Bund only",
+      "summary": "Keep only one selected waypoint, which is not enough for a navigable route.",
+      "before": [
+        {
+          "name": "People's Square",
+          "address": "Huangpu, Shanghai",
+          "latitude": 31.2304,
+          "longitude": 121.4737,
+          "is_selected": true,
+          "stay_minutes": 20
+        },
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        }
+      ],
+      "after": [
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        }
+      ],
+      "expected_change_kinds": [
+        "removed"
+      ],
+      "expected_card_title": "1 changes to review",
+      "expected_safety_line": "This proposal has too few selected waypoints to apply.",
+      "expected_usable": false,
+      "expected_point_count_delta": "-1 waypoints"
+    }
+  ]
+}

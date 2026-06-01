@@ -49,4 +49,10 @@ let narrative = RouteNarrativeTests()
 narrative.testDialogueScenariosProduceSpecificProposalNarratives()
 narrative.testFailureNarrativeKeepsCurrentListSafeAndActionable()
 
-print("WaypointKit validation passed (39 validation cases).")
+let fixtures = RouteEditRegressionFixturesTests()
+fixtures.testRegressionFixtureFileDecodes()
+fixtures.testRegressionFixturesProduceExpectedDiffKinds()
+fixtures.testRegressionFixturesProduceExpectedNarratives()
+fixtures.testRegressionFixturesSurfaceBlockingWarnings()
+
+print("WaypointKit validation passed (43 validation cases).")
