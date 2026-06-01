@@ -1,11 +1,12 @@
 # Changelog
 
-## Unreleased
+## 0.3.0 - 2026-06-01
 
 - Added `POIProvider`, `POISearchRequest`, and `MockPOIProvider` for provider-neutral POI verification.
 - Added a build-checked SwiftUI example target for ETA-style route proposal review.
 - Documented WGS-84 / GCJ-02 provider boundaries for MapKit, mock providers, and AMap-style integrations.
 - Expanded validation coverage to 47 framework-free validation cases.
+- Updated GitHub Actions checkout to `actions/checkout@v6.0.2`.
 
 ## 0.2.0 - 2026-06-01
 
