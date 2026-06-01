@@ -13,6 +13,10 @@ let package = Package(
             name: "WaypointKit",
             targets: ["WaypointKit"]
         ),
+        .library(
+            name: "WaypointKitSwiftUIDemo",
+            targets: ["WaypointKitSwiftUIDemo"]
+        ),
         .executable(
             name: "WaypointKitDemo",
             targets: ["WaypointKitDemo"]
@@ -21,6 +25,12 @@ let package = Package(
     targets: [
         .target(
             name: "WaypointKit"
+        ),
+        .target(
+            name: "WaypointKitSwiftUIDemo",
+            dependencies: ["WaypointKit"],
+            path: "Examples/WaypointKitSwiftUIDemo",
+            exclude: ["README.md"]
         ),
         .executableTarget(
             name: "WaypointKitDemo",

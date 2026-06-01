@@ -1,7 +1,7 @@
 import CoreLocation
 import Foundation
 
-public struct Waypoint: Identifiable, Codable, Equatable {
+public struct Waypoint: Identifiable, Codable, Equatable, Sendable {
     public var id: UUID
     public var name: String
     public var address: String
@@ -56,7 +56,7 @@ public struct Waypoint: Identifiable, Codable, Equatable {
 
 public typealias RoutePoint = Waypoint
 
-public enum PlaceSource: String, Codable, Equatable {
+public enum PlaceSource: String, Codable, Equatable, Sendable {
     case amap = "AMap"
     case appleMaps = "Apple Maps"
     case gps = "GPS"
@@ -69,7 +69,7 @@ public enum RouteEngineSource: String, Equatable {
     case estimated = "Estimated route"
 }
 
-public enum RouteCoordinateSystem: String, Equatable, Codable {
+public enum RouteCoordinateSystem: String, Equatable, Codable, Sendable {
     case wgs84
     case gcj02
 }

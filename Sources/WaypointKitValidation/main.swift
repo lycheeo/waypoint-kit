@@ -31,6 +31,12 @@ editing.testPreferredPointFiltersAdministrativePOIs()
 editing.testPromptBuilderIncludesCurrentWaypointsAndHistory()
 editing.testToolSchemasExposeEditAndSearchTools()
 
+let poiProvider = POIProviderTests()
+await poiProvider.testMockProviderSearchesByQuery()
+await poiProvider.testMockProviderFiltersByCity()
+await poiProvider.testMockProviderFiltersByPlaceKind()
+poiProvider.testMockProviderKeepsRequestCoordinateBoundary()
+
 let ai = RouteAIOrchestrationTests()
 ai.testGreetingIsAnsweredWithoutRouteEditing()
 ai.testChineseGreetingIsRoutedToAIConversation()
@@ -55,4 +61,4 @@ fixtures.testRegressionFixturesProduceExpectedDiffKinds()
 fixtures.testRegressionFixturesProduceExpectedNarratives()
 fixtures.testRegressionFixturesSurfaceBlockingWarnings()
 
-print("WaypointKit validation passed (43 validation cases).")
+print("WaypointKit validation passed (47 validation cases).")
