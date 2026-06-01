@@ -18,7 +18,7 @@ The package is extracted from ETA, a real iOS route-planning app, and focuses on
 Add the package to another Swift package:
 
 ```swift
-.package(url: "https://github.com/lycheeo/waypoint-kit.git", from: "0.1.1")
+.package(url: "https://github.com/lycheeo/waypoint-kit.git", from: "0.2.0")
 ```
 
 Then depend on the library target:
