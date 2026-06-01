@@ -6,7 +6,7 @@ This repository is ready for public publishing after a GitHub repository is crea
 
 - Run `scripts/preflight.sh`.
 - Confirm no real API keys, device identifiers, Apple Team IDs, or private app-store configuration are present.
-- Replace `<your-github-username>` in README and application notes after the remote repository exists.
+- Replace `lycheeo` in README and application notes after the remote repository exists.
 
 ## Create Remote Repository
 
@@ -31,7 +31,7 @@ swift, ios, route-planning, ai-agents, openai, mapkit, itinerary, swift-package
 ## Push
 
 ```bash
-git remote add origin git@github.com:<your-github-username>/waypoint-kit.git
+git remote add origin git@github.com:lycheeo/waypoint-kit.git
 git push -u origin main
 git tag -a v0.1.0 -m "WaypointKit 0.1.0"
 git push origin v0.1.0

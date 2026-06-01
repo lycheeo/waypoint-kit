@@ -4,7 +4,7 @@ Use this only after the GitHub repository is public and the first release exists
 
 ## Project
 
-Repository: `https://github.com/<your-github-username>/waypoint-kit`
+Repository: `https://github.com/lycheeo/waypoint-kit`
 
 Project name: `WaypointKit`
 
