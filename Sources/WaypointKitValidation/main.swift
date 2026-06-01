@@ -61,4 +61,9 @@ fixtures.testRegressionFixturesProduceExpectedDiffKinds()
 fixtures.testRegressionFixturesProduceExpectedNarratives()
 fixtures.testRegressionFixturesSurfaceBlockingWarnings()
 
-print("WaypointKit validation passed (47 validation cases).")
+let multiTurnFixtures = MultiTurnRouteEditFixtureTests()
+multiTurnFixtures.testMultiTurnFixtureFileDecodes()
+multiTurnFixtures.testMultiTurnFixturesMatchRouterExpectations()
+multiTurnFixtures.testMultiTurnFixturesPreservePromptContext()
+
+print("WaypointKit validation passed (50 validation cases).")

@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Added DocC documentation for the core package API.
+- Added README badges, a 30-second local check, contributor testing guide, issue templates, and a pull request template.
+- Added multi-turn route-edit fixtures for short clarification answers and route-context preservation.
+- Expanded validation coverage to 50 framework-free validation cases.
+
 ## 0.3.0 - 2026-06-01
 
 - Added `POIProvider`, `POISearchRequest`, and `MockPOIProvider` for provider-neutral POI verification.

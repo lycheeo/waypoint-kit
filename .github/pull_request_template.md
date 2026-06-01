@@ -1,14 +1,13 @@
 ## Summary
 
-Describe the change.
+- Describe the change.
 
 ## Validation
 
-- [ ] `swift build`
-- [ ] `swift run WaypointKitValidation`
+- [ ] `scripts/preflight.sh`
 
-## Safety
+## Notes
 
-- [ ] No API keys or private config committed
-- [ ] Route-state changes are covered by validation
-- [ ] Provider-specific behavior is mockable or isolated
+- Does this PR change route-state behavior?
+- Does this PR add or update public fixtures?
+- Does this PR avoid service keys, signing metadata, and private ETA app code?

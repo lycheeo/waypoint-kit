@@ -4,10 +4,11 @@ WaypointKit keeps model-facing behavior behind deterministic fixtures before it 
 
 ## Route-Edit Regression Fixtures
 
-Fixture file:
+Fixture files:
 
 ```text
 Fixtures/route-edit-regressions.json
+Fixtures/multi-turn-route-edits.json
 ```
 
 Validation command:
@@ -24,6 +25,8 @@ The validation executable decodes the fixture file and checks that each case pro
 - route usability result
 - blocking warning behavior
 - point-count delta text
+- multi-turn prompt context
+- local routing passthrough for short clarification answers
 
 Current cases:
 
@@ -33,6 +36,14 @@ Current cases:
 | `append-food-stop` | Adding a verified food stop should produce one add change and keep the route usable. |
 | `reorder-final-walk-first` | Reordering the same waypoint set should stay a reorder, not become remove/add churn. |
 | `delete-to-single-stop-blocked` | A one-stop proposal should remain reviewable but blocked from application. |
+
+Multi-turn cases:
+
+| Case | Purpose |
+| --- | --- |
+| `short-answer-after-open-origin-question` | A short answer to an assistant origin question should pass through to route editing instead of being treated as small talk. |
+| `short-anywhere-after-city-question` | An ambiguous short answer should keep the prior clarification question in prompt context. |
+| `inspiration-keeps-existing-route-context` | Inspiration with an existing route should stay conversational while preserving current waypoint context. |
 
 ## Why Fixtures Matter
 
