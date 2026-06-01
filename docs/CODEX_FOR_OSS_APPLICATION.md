@@ -10,6 +10,8 @@ Project name: `WaypointKit`
 
 Role: primary maintainer
 
+Submission draft: `docs/OPENAI_CODEX_OSS_SUBMISSION.md`
+
 ## Short Description
 
 WaypointKit is an open-source Swift toolkit for AI-assisted route planning and waypoint editing. It helps apps turn natural-language itinerary changes into verified, reviewable waypoint proposals instead of letting a model directly invent coordinates or mutate route state.
