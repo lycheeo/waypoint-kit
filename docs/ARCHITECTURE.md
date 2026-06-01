@@ -36,6 +36,8 @@ Small talk, capability questions, and trip inspiration can stay conversational. 
 
 `RouteListEditingToolSchemas.searchPOIsToolSchema` exists because model output should not directly become route state. Apps should search a real POI provider, return candidate IDs, and only apply verified waypoints.
 
+`POIProvider` is the provider-neutral boundary for app integrations. `MockPOIProvider` supports offline tests and examples without committed service keys.
+
 ### 5. Proposal Application
 
 `RouteChangeDiffBuilder` and `RouteChangeProposalNarrative` turn a target waypoint list into reviewable changes. The app decides when to apply the proposal.

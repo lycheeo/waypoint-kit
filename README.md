@@ -9,6 +9,7 @@ The package is extracted from ETA, a real iOS route-planning app, and focuses on
 - waypoint models for route stops, stay time, selected state, POI metadata, and favorites
 - route metrics, distance fallback, route diffing, and safe proposal narratives
 - WGS-84 / GCJ-02 coordinate conversion for China map-provider integrations
+- provider-neutral POI search protocol with a mock provider for tests and demos
 - AI intent routing for small talk, trip inspiration, route creation, and route editing
 - prompt builders and tool schemas for verified POI search before applying model-generated edits
 - validation executable covering coordinate conversion, waypoint identity, route metrics, collection rules, route diffs, prompt generation, AI orchestration, and route-edit regression fixtures
@@ -25,6 +26,12 @@ Then depend on the library target:
 
 ```swift
 .product(name: "WaypointKit", package: "waypoint-kit")
+```
+
+Optional example module:
+
+```swift
+.product(name: "WaypointKitSwiftUIDemo", package: "waypoint-kit")
 ```
 
 ## Basic Usage
@@ -44,11 +51,17 @@ let prompt = RouteListEditingPromptBuilder.userPromptForEdit(
 )
 
 let toolSchema = RouteListEditingToolSchemas.openAIEditToolSchema
+let provider = MockPOIProvider(points: [
+    Waypoint(name: "Xuhui Riverside", address: "Shanghai", latitude: 31.1808, longitude: 121.4639)
+])
+let candidates = try await provider.searchPOIs(
+    POISearchRequest(query: "riverside", city: "Shanghai", placeKind: "scenic")
+)
 let changes = RouteChangeDiffBuilder.changes(
     before: current,
     after: [
         current[0],
-        Waypoint(name: "Xuhui Riverside", address: "Shanghai", latitude: 31.1808, longitude: 121.4639)
+        candidates[0]
     ]
 )
 ```
@@ -77,7 +90,7 @@ swift run WaypointKitValidation
 Expected output:
 
 ```text
-WaypointKit validation passed (43 validation cases).
+WaypointKit validation passed (47 validation cases).
 ```
 
 ## Demo
@@ -90,6 +103,8 @@ swift run WaypointKitDemo
 
 It shows a verified candidate replacing a route stop, then prints the reviewable proposal, safety line, and distance fallback.
 
+The SwiftUI example target lives in [Examples/WaypointKitSwiftUIDemo](Examples/WaypointKitSwiftUIDemo) and compiles with `swift build`.
+
 ## Evals
 
 WaypointKit includes public route-editing regression fixtures in [Fixtures/route-edit-regressions.json](Fixtures/route-edit-regressions.json). The validation executable decodes them and checks diff, narrative, usability, and warning behavior.
@@ -101,5 +116,7 @@ See [docs/EVALS.md](docs/EVALS.md) for the current evaluation surface and planne
 This is an early open-source extraction from the ETA app. The first public milestone is a stable core toolkit, not a full navigation app.
 
 See [ROADMAP.md](ROADMAP.md) for planned provider abstractions and expanded regression evaluation work.
+
+See [docs/COORDINATE_SYSTEMS.md](docs/COORDINATE_SYSTEMS.md) for WGS-84 / GCJ-02 provider boundary rules.
 
 See [docs/MAINTENANCE_EVIDENCE.md](docs/MAINTENANCE_EVIDENCE.md) for the public maintenance evidence and the local ETA extraction boundary.
