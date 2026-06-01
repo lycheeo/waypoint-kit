@@ -30,13 +30,13 @@ The project was extracted from ETA, a real iOS route-planning app developed and 
 - Swift package with public API and MIT license.
 - Validation executable with 39 validation cases.
 - Documentation for architecture, contribution flow, security, and roadmap.
-- Public release: `v0.1.0`.
+- Public release: `v0.1.1`.
 - Local ETA source history includes a V4.20 frozen baseline, a V5.70 iOS archive, 15 local validation screenshots, and a versioned development log. These private artifacts are summarized in `docs/MAINTENANCE_EVIDENCE.md` without publishing signing metadata, device identifiers, private UI code, or service credentials.
 
 Published evidence:
 
 - Public repo URL: https://github.com/lycheeo/waypoint-kit
-- Release URL: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.1.0
+- Release URL: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.1.1
 - Issues:
   - https://github.com/lycheeo/waypoint-kit/issues/1
   - https://github.com/lycheeo/waypoint-kit/issues/2
