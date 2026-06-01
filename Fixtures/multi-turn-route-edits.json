@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "description": "Multi-turn route-editing fixtures for prompt context and local routing behavior.",
+  "cases": [
+    {
+      "id": "short-answer-after-open-origin-question",
+      "title": "Short answer after assistant asks for origin should pass to route editor",
+      "user_prompt": "Use my current location",
+      "current_points": [],
+      "conversation_turns": [
+        {
+          "role": "assistant",
+          "text": "Tell me where to start, or say you want to use your current location."
+        }
+      ],
+      "expected_route_editor_passthrough": true,
+      "expected_router_intent": null,
+      "expected_prompt_contains": [
+        "assistant: Tell me where to start",
+        "Use my current location",
+        "Do not invent coordinates"
+      ]
+    },
+    {
+      "id": "short-anywhere-after-city-question",
+      "title": "Short ambiguous answer after clarification should preserve prior question context",
+      "user_prompt": "you decide",
+      "current_points": [],
+      "conversation_turns": [
+        {
+          "role": "assistant",
+          "text": "What city do you want to explore?"
+        }
+      ],
+      "expected_route_editor_passthrough": true,
+      "expected_router_intent": null,
+      "expected_prompt_contains": [
+        "assistant: What city do you want to explore?",
+        "you decide",
+        "If the user gives a short answer"
+      ]
+    },
+    {
+      "id": "inspiration-keeps-existing-route-context",
+      "title": "Inspiration request with existing route should stay conversational and preserve route context",
+      "user_prompt": "give me lighter ideas",
+      "current_points": [
+        {
+          "name": "People's Square",
+          "address": "Huangpu, Shanghai",
+          "latitude": 31.2304,
+          "longitude": 121.4737,
+          "is_selected": true,
+          "stay_minutes": 20
+        },
+        {
+          "name": "The Bund",
+          "address": "Zhongshan East 1st Road, Shanghai",
+          "latitude": 31.2397,
+          "longitude": 121.4998,
+          "is_selected": true,
+          "stay_minutes": 30
+        }
+      ],
+      "conversation_turns": [
+        {
+          "role": "user",
+          "text": "I want something quieter after dinner."
+        }
+      ],
+      "expected_route_editor_passthrough": false,
+      "expected_router_intent": "inspiration",
+      "expected_prompt_contains": [
+        "People's Square",
+        "The Bund",
+        "I want something quieter after dinner.",
+        "give me lighter ideas"
+      ]
+    }
+  ]
+}

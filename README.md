@@ -1,5 +1,9 @@
 # WaypointKit
 
+[![Validation](https://github.com/lycheeo/waypoint-kit/actions/workflows/validation.yml/badge.svg)](https://github.com/lycheeo/waypoint-kit/actions/workflows/validation.yml)
+[![Release](https://img.shields.io/github/v/release/lycheeo/waypoint-kit)](https://github.com/lycheeo/waypoint-kit/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 AI-assisted route planning and waypoint editing for Swift apps.
 
 WaypointKit is a Swift package for building itinerary editors where a model can understand route changes, but the app keeps control of real places, coordinates, diffs, and final state changes.
@@ -13,6 +17,18 @@ The package is extracted from ETA, a real iOS route-planning app, and focuses on
 - AI intent routing for small talk, trip inspiration, route creation, and route editing
 - prompt builders and tool schemas for verified POI search before applying model-generated edits
 - validation executable covering coordinate conversion, waypoint identity, route metrics, collection rules, route diffs, prompt generation, AI orchestration, and route-edit regression fixtures
+
+## 30-Second Check
+
+```bash
+git clone https://github.com/lycheeo/waypoint-kit.git
+cd waypoint-kit
+swift build
+swift run WaypointKitValidation
+swift run WaypointKitDemo
+```
+
+The package does not require service keys for local validation or demos.
 
 ## Install
 
@@ -110,6 +126,8 @@ The SwiftUI example target lives in [Examples/WaypointKitSwiftUIDemo](Examples/W
 WaypointKit includes public route-editing regression fixtures in [Fixtures/route-edit-regressions.json](Fixtures/route-edit-regressions.json). The validation executable decodes them and checks diff, narrative, usability, and warning behavior.
 
 See [docs/EVALS.md](docs/EVALS.md) for the current evaluation surface and planned expansion.
+
+See [docs/TESTING_GUIDE.md](docs/TESTING_GUIDE.md) for a contributor-friendly local test path.
 
 ## Status
 

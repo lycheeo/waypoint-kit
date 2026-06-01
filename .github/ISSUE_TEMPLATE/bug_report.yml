@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a reproducible WaypointKit issue.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Include commands, fixture names, or a small Swift snippet.
+      placeholder: |
+        swift build
+        swift run WaypointKitValidation
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: WaypointKit version
+      placeholder: v0.4.0
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
