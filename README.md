@@ -35,7 +35,7 @@ The package does not require service keys for local validation or demos.
 Add the package to another Swift package:
 
 ```swift
-.package(url: "https://github.com/lycheeo/waypoint-kit.git", from: "0.3.0")
+.package(url: "https://github.com/lycheeo/waypoint-kit.git", from: "0.4.0")
 ```
 
 Then depend on the library target:

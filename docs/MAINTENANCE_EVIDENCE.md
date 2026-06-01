@@ -5,13 +5,16 @@ WaypointKit is an early open-source extraction from ETA, a private iOS route-pla
 ## Public Evidence
 
 - Repository: https://github.com/lycheeo/waypoint-kit
-- Release: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.3.0
+- Release: https://github.com/lycheeo/waypoint-kit/releases/tag/v0.4.0
 - License: MIT
 - Demo command: `swift run WaypointKitDemo`
 - Validation command: `swift run WaypointKitValidation`
 - SwiftUI example: `Examples/WaypointKitSwiftUIDemo`
-- Current validation coverage: 47 framework-free validation cases
+- DocC documentation: `Sources/WaypointKit/WaypointKit.docc`
+- Contributor testing guide: `docs/TESTING_GUIDE.md`
+- Current validation coverage: 50 framework-free validation cases
 - Public route-edit regression fixtures: `Fixtures/route-edit-regressions.json`
+- Multi-turn route-edit fixtures: `Fixtures/multi-turn-route-edits.json`
 - Provider-neutral POI boundary: `POIProvider`, `POISearchRequest`, and `MockPOIProvider`
 - Coordinate boundary documentation: `docs/COORDINATE_SYSTEMS.md`
 - Merged pull requests:
@@ -19,9 +22,10 @@ WaypointKit is an early open-source extraction from ETA, a private iOS route-pla
   - https://github.com/lycheeo/waypoint-kit/pull/6
   - https://github.com/lycheeo/waypoint-kit/pull/7
   - https://github.com/lycheeo/waypoint-kit/pull/8
+  - https://github.com/lycheeo/waypoint-kit/pull/12
+  - https://github.com/lycheeo/waypoint-kit/pull/13
 - Public maintenance plan:
   - Open:
-    - https://github.com/lycheeo/waypoint-kit/issues/9
     - https://github.com/lycheeo/waypoint-kit/issues/10
     - https://github.com/lycheeo/waypoint-kit/issues/11
   - Closed through public PR workflow:
@@ -29,6 +33,7 @@ WaypointKit is an early open-source extraction from ETA, a private iOS route-pla
     - https://github.com/lycheeo/waypoint-kit/issues/2
     - https://github.com/lycheeo/waypoint-kit/issues/3
     - https://github.com/lycheeo/waypoint-kit/issues/4
+    - https://github.com/lycheeo/waypoint-kit/issues/9
 
 ## Local Source Evidence
 
@@ -59,6 +64,8 @@ The open-source package keeps only the reusable core:
 - build-checked SwiftUI example using mock provider data
 - no-network demo flow for a verified candidate replacement
 - public route-edit regression fixtures for reviewable diff and warning behavior
+- public multi-turn fixtures for short clarification answers and route-context preservation
+- contributor-facing issue templates, PR template, and testing guide
 - deterministic validation cases that do not require private API keys
 
 The package does not publish ETA's private app shell, provider credentials, signing information, device identifiers, or vendor-specific service clients.
