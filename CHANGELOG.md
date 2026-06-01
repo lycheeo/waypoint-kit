@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.4.0 - 2026-06-01
 
 - Added DocC documentation for the core package API.
 - Added README badges, a 30-second local check, contributor testing guide, issue templates, and a pull request template.
